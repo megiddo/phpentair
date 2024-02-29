@@ -1,0 +1,24 @@
+server {
+    listen 80;
+    server_name _;
+
+    root /var/www;
+    index index.html;
+
+    add_header Access-Control-Allow-Origin *;
+
+    location ~ /api {
+        proxy_pass localhost:14080;
+        include proxy_params;
+    }
+
+    location ~ /app {
+        proxy_pass localhost:16080;
+        include proxy_params;
+    }
+
+    location ~ /signal {
+        proxy_pass localhost:15080;
+        include proxy_params;
+    }
+}

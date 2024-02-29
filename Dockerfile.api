@@ -1,0 +1,24 @@
+FROM ubuntu:22.04
+
+RUN apt-get update
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install tzdata
+RUN apt-get update && apt-get install -y less gzip wget nginx zip unzip git nano mysql-client cron sqlite3
+RUN apt-get update && apt-get install --no-install-recommends -y php8.1 php-sqlite3
+RUN apt-get install -y php8.1-fpm php8.1-cli php8.1-common php8.1-mysql php8.1-mbstring php8.1-curl php8.1-xml
+
+RUN mkdir -p /var/www/pentair/api
+RUN chown -R www-data:www-data /var/www/pentair
+
+COPY nginx.api.config /etc/nginx/sites-available/pentair
+RUN rm /etc/nginx/sites-enabled/*
+RUN ln -s /etc/nginx/sites-available/pentair /etc/nginx/sites-enabled/pentair
+
+WORKDIR /var/www/pentair
+
+COPY --from=composer /usr/bin/composer /var/www/pentair/composer.phar
+RUN mv /var/www/pentair/composer.phar /usr/local/bin/composer
+
+COPY heartbeat.sh /var/www/pentair/heartbeat.sh
+RUN chmod +x heartbeat.sh
+
+CMD ./heartbeat.sh

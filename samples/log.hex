@@ -1,0 +1,254 @@
+/*
+filter on
+05:33 pm
+pool 68/89
+pool set 90
+air 73
+spa set 98
+*/
+< 0x0	 ff ff ff ff ff ff ff ff 00 ff a5 0c 0f 10 02 1d
+< 0x10	 11 21 20 00 00 00 00 00 00 20 00 00 00 04 44 44
+< 0x20	 00 00 49 00 00 00 04 00 00 b5 e1 00 0d 03 dd
+
+/*
+filter on
+cleaner on
+05:31 pm
+pool 68/89
+pool set 90
+air 73
+spa set 98
+*/
+< 0x0	 ff ff ff ff ff ff ff ff 00 ff a5 0c 0f 10 02 1d
+< 0x10	 11 22 22 00 00 00 00 00 00 20 00 00 00 04 44 44
+< 0x20	 00 00 49 00 00 00 04 00 00 b5 e1 00 0d 03 e0
+
+/*
+filter on
+waterfall on
+05:31 pm
+pool 68/89
+pool set 90
+air 73
+spa set 98
+*/
+< 0x0	 ff ff ff ff ff ff ff ff 00 ff a5 0c 0f 10 02 1d
+< 0x10	 11 24 24 00 00 00 00 00 00 20 00 00 00 04 44 44
+< 0x20	 00 00 49 00 00 00 04 00 00 b5 e1 00 0d 03 e4
+
+/*
+filter on
+spa light on
+05:31 pm
+pool 68/89
+pool set 90
+air 73
+spa set 98
+*/
+< 0x0	 ff ff ff ff ff ff ff ff 00 ff a5 0c 0f 10 02 1d
+< 0x10	 11 25 28 00 00 00 00 00 00 20 00 00 00 04 44 44
+< 0x20	 00 00 49 00 00 00 04 00 00 b5 e1 00 0d 03 e9
+
+/*
+filter on
+pool light on
+05:31 pm
+pool 68/89
+pool set 90
+air 73
+spa set 98
+*/
+< 0x0	 ff ff ff ff ff ff ff ff 00 ff a5 0c 0f 10 02 1d
+< 0x10	 11 26 30 00 00 00 00 00 00 20 00 00 00 04 44 44
+< 0x20	 00 00 48 00 00 00 04 00 00 b5 e1 00 0d 03 f1
+
+/*
+filter on
+05:31 pm
+pool 68/89
+pool set 85
+air 73
+spa set 98
+*/
+< 0x10	 11 27 20 00 00 00 00 00 00 20 00 00 00 04 44 44
+< 0x20	 00 00 48 00 00 00 04 00 00 b5 e1 00 0d 03 e2
+< 0x0	 ff ff ff ff ff ff ff ff 00 ff a5 0c 0f 10 02 1d
+
+/*
+filter on
+05:31 pm
+pool 68/89
+pool set 85
+air 73
+spa set 93
+*/
+< 0x0	 ff ff ff ff ff ff ff ff 00 ff a5 0c 0f 10 02 1d
+< 0x10	 11 29 20 00 00 00 00 00 00 20 00 00 00 04 44 44
+< 0x20	 00 00 48 00 00 00 04 00 00 e0 dc 00 0d 04 0a
+
+/*
+filter on
+05:31 pm
+pool 68/89
+pool set 85
+air 73
+spa set 98
+spa on
+heat on
+*/
+< 0x0	 ff ff ff ff ff ff ff ff 00 ff a5 0c 0f 10 02 1d
+< 0x10	 11 29 20 00 00 00 00 00 00 20 00 00 00 04 44 44
+< 0x20	 00 00 48 00 00 00 04 00 00 e0 dc 00 0d 04 0a ff
+< 0x30	 ff ff ff ff ff ff ff 00 ff a5 0c 0f 10 02 1d 11
+< 0x40	 29 20 00 00 00 00 00 00 20 00 00 00 04 44 44 00
+< 0x50	 00 48 00 00 00 04 00 00 e0 dc 00 0d 04 0a ff ff
+< 0x60	 ff ff ff ff ff ff 00 ff a5 0c 0f 10 02 1d 11 29
+< 0x70	 20 00 00 00 00 00 00 20 00 00 00 04 44 44 00 00
+< 0x80	 48 00 00 00 04 00 00 e0 dc 00 0d 04 0a ff ff ff
+< 0x90	 ff ff ff ff ff 00 ff a5 0c 0f 10 02 1d 11 29 20
+< 0xa0	 00 00 00 00 00 00 20 00 00 00 04 44 44 00 00 48
+< 0xb0	 00 00 00 04 00 00 e0 dc 00 0d 04 0a ff ff ff ff
+< 0xc0	 ff ff ff ff 00 ff a5 0c 0f 10 02 1d 11 29 20 00
+< 0xd0	 00 00 00 00 00 20 00 00 00 04 44 44 00 00 48 00
+< 0xe0	 00 00 04 00 00 e0 dc 00 0d 04 0a ff ff ff ff ff
+< 0xf0	 ff ff ff 00 ff a5 0c 0f 10 02 1d 11 29 20 00 00
+< 0x100	 00 00 00 00 20 00 00 00 04 44 44 00 00 48 00 00
+< 0x110	 00 04 00 00 e0 dc 00 0d 04 0a 10 02 50 11 32 a5
+< 0x120	 10 03 ff ff ff ff ff ff ff ff 00 ff a5 0c 0f 10
+< 0x130	 02 1d 11 29 20 00 00 00 00 00 00 20 00 00 00 04
+< 0x140	 44 44 00 00 48 00 00 00 04 00 00 e0 dc 00 0d 04
+< 0x150	 0a ff ff ff ff ff ff ff ff 00 ff a5 0c 0f 10 02
+< 0x160	 1d 11 29 20 00 00 00 00 00 00 20 00 00 00 04 44
+< 0x170	 44 00 00 48 00 00 00 04 00 00 e0 dc 00 0d 04 0a
+< 0x180	 ff ff ff ff ff ff ff ff 00 ff a5 0c 0f 10 02 1d
+< 0x190	 11 29 20 00 00 00 00 00 00 20 00 00 00 04 44 44
+< 0x1a0	 00 00 48 00 00 00 04 00 00 e0 dc 00 0d 04 0a ff
+< 0x1b0	 ff ff ff ff ff ff ff 00 ff a5 0c 0f 10 02 1d 11
+< 0x1c0	 29 20 00 00 00 00 00 00 20 00 00 00 04 44 44 00
+< 0x1d0	 00 48 00 00 00 04 00 00 e0 dc 00 0d 04 0a ff ff
+< 0x1e0	 ff ff ff ff ff ff 00 ff a5 0c 0f 10 02 1d 11 29
+< 0x1f0	 20 00 00 00 00 00 00 20 00 00 00 04 44 44 00 00
+< 0x200	 48 00 00 00 04 00 00 e0 dc 00 0d 04 0a ff ff ff
+< 0x210	 ff ff ff ff ff 00 ff a5 0c 0f 10 02 1d 11 29 20
+< 0x220	 00 00 00 00 00 00 20 00 00 00 04 44 44 00 00 48
+< 0x230	 00 00 00 04 00 00 e0 dc 00 0d 04 0a ff ff ff ff
+< 0x240	 ff ff ff ff 00 ff a5 0c 0f 10 02 1d 11 29 20 00
+< 0x250	 00 00 00 00 00 20 00 00 00 04 44 44 00 00 48 00
+< 0x260	 00 00 04 00 00 e0 dc 00 0d 04 0a ff ff ff ff ff
+< 0x270	 ff ff ff 00 ff a5 0c 0f 10 05 08 11 2a 40 18 02
+< 0x280	 18 00 00 01 8a ff ff ff ff ff ff ff ff 00 ff a5
+< 0x290	 0c 0f 10 02 1d 11 2a 20 00 00 00 00 00 00 20 00
+< 0x2a0	 00 00 04 44 44 00 00 48 00 00 00 04 00 00 e0 dc
+< 0x2b0	 00 0d 04 0b ff ff ff ff ff ff ff ff 00 ff a5 0c
+< 0x2c0	 0f 10 02 1d 11 2a 20 00 00 00 00 00 00 20 00 00
+< 0x2d0	 00 04 44 44 00 00 48 00 00 00 04 00 00 e0 dc 00
+< 0x2e0	 0d 04 0b 10 02 50 14 00 76 10 03 ff ff ff ff ff
+< 0x2f0	 ff ff ff 00 ff a5 0c 0f 10 02 1d 11 2a 20 00 00
+< 0x300	 00 00 00 00 20 00 00 00 04 44 44 00 00 48 00 00
+< 0x310	 00 04 00 00 e0 dc 00 0d 04 0b ff ff ff ff ff ff
+< 0x320	 ff ff 00 ff a5 0c 0f 10 02 1d 11 2a 20 00 00 00
+< 0x330	 00 00 00 20 00 00 00 04 44 44 00 00 48 00 00 00
+< 0x340	 04 00 00 e0 dc 00 0d 04 0b ff ff ff ff ff ff ff
+< 0x350	 ff 00 ff a5 0c 0f 10 02 1d 11 2a 20 00 00 00 00
+< 0x360	 00 00 20 00 00 00 04 44 44 00 00 48 00 00 00 04
+< 0x370	 00 00 e0 dc 00 0d 04 0b ff ff ff ff ff ff ff ff
+< 0x380	 00 ff a5 0c 0f 10 02 1d 11 2a 20 00 00 00 00 00
+< 0x390	 00 20 00 00 00 04 44 44 00 00 48 00 00 00 04 00
+< 0x3a0	 00 e0 dc 00 0d 04 0b ff ff ff ff ff ff ff ff 00
+< 0x3b0	 ff a5 0c 0f 10 08 0d 44 44 48 5a 62 04 00 00 00
+< 0x3c0	 00 00 00 00 02 75 ff ff ff ff ff ff ff ff 00 ff
+< 0x3d0	 a5 0c 0f 10 02 1d 11 2a 20 00 00 00 00 00 00 20
+< 0x3e0	 00 00 00 04 44 44 00 00 48 00 00 00 04 00 00 bc
+< 0x3f0	 e1 00 0d 03 ec ff ff ff ff ff ff ff ff 00 ff a5
+< 0x0	 0c 0f 10 02 1d 11 2a 20 00 00 00 00 00 00 20 00
+< 0x10	 00 00 04 44 44 00 00 48 00 00 00 04 00 00 bc e1
+< 0x20	 00 0d 03 ec ff ff ff ff ff ff ff ff 00 ff a5 0c
+< 0x30	 0f 10 02 1d 11 2a 20 00 00 00 00 00 00 20 00 00
+< 0x40	 00 04 44 44 00 00 48 00 00 00 04 00 00 bc e1 00
+< 0x50	 0d 03 ec ff ff ff ff ff ff ff ff 00 ff a5 0c 0f
+< 0x60	 10 02 1d 11 2a 20 00 00 00 00 00 00 20 00 00 00
+< 0x70	 04 44 44 00 00 48 00 00 00 04 00 00 bc e1 00 0d
+< 0x80	 03 ec ff ff ff ff ff ff ff ff 00 ff a5 0c 0f 10
+< 0x90	 02 1d 11 2a 20 00 00 00 00 00 00 20 00 00 00 04
+< 0xa0	 44 44 00 00 48 00 00 00 04 00 00 bc e1 00 0d 03
+< 0xb0	 ec 10 02 50 11 32 a5 10 03 ff ff ff ff ff ff ff
+< 0xc0	 ff 00 ff a5 0c 0f 10 02 1d 11 2a 20 00 00 00 00
+< 0xd0	 00 00 20 00 00 00 04 44 44 00 00 48 00 00 00 04
+< 0xe0	 00 00 bc e1 00 0d 03 ec ff ff ff ff ff ff ff ff
+< 0xf0	 00 ff a5 0c 0f 10 02 1d 11 2a 20 00 00 00 00 00
+< 0x100	 00 20 00 00 00 04 44 44 00 00 48 00 00 00 04 00
+< 0x110	 00 bc e1 00 0d 03 ec ff ff ff ff ff ff ff ff 00
+< 0x120	 ff a5 0c 0f 10 02 1d 11 2a 20 00 00 00 00 00 00
+< 0x130	 20 00 00 00 04 44 44 00 00 48 00 00 00 04 00 00
+< 0x140	 bc e1 00 0d 03 ec ff ff ff ff ff ff ff ff 00 ff
+< 0x150	 a5 0c 0f 10 02 1d 11 2a 20 00 00 00 00 00 00 20
+< 0x160	 00 00 00 04 44 44 00 00 48 00 00 00 04 00 00 bc
+< 0x170	 e1 00 0d 03 ec ff ff ff ff ff ff ff ff 00 ff a5
+< 0x180	 0c 0f 10 02 1d 11 2a 20 00 00 00 00 00 00 20 00
+< 0x190	 00 00 04 44 44 00 00 48 00 00 00 04 00 00 bc e1
+< 0x1a0	 00 0d 03 ec ff ff ff ff ff ff ff ff 00 ff a5 0c
+< 0x1b0	 0f 10 02 1d 11 2a 20 00 00 00 00 00 00 20 00 00
+< 0x1c0	 00 04 44 44 00 00 48 00 00 00 04 00 00 bc e1 00
+< 0x1d0	 0d 03 ec ff ff ff ff ff ff ff ff 00 ff a5 0c 0f
+< 0x1e0	 10 02 1d 11 2a 20 00 00 00 00 00 00 20 00 00 00
+< 0x1f0	 04 44 44 00 00 48 00 00 00 04 00 00 bc e1 00 0d
+< 0x200	 03 ec ff ff ff ff ff ff ff ff 00 ff a5 0c 0f 10
+< 0x210	 02 1d 11 2a 20 00 00 00 00 00 00 20 00 00 00 04
+< 0x220	 44 44 00 00 48 00 00 00 04 00 00 bc e1 00 0d 03
+< 0x230	 ec ff ff ff ff ff ff ff ff 00 ff a5 0c 0f 10 02
+< 0x240	 1d 11 2a 20 00 00 00 00 00 00 20 00 00 00 04 44
+< 0x250	 44 00 00 48 00 00 00 04 00 00 bc e1 00 0d 03 ec
+< 0x260	 10 02 50 11 32 a5 10 03 ff ff ff ff ff ff ff ff
+< 0x270	 00 ff a5 0c 0f 10 02 1d 11 2a 20 00 00 00 00 00
+< 0x280	 00 20 00 00 00 04 44 44 00 00 48 00 00 00 04 00
+< 0x290	 00 bc e1 00 0d 03 ec ff ff ff ff ff ff ff ff 00
+< 0x2a0	 ff a5 0c 0f 10 02 1d 11 2a 20 00 00 00 00 00 00
+< 0x2b0	 20 00 00 00 04 44 44 00 00 48 00 00 00 04 00 00
+< 0x2c0	 bc e1 00 0d 03 ec ff ff ff ff ff ff ff ff 00 ff
+< 0x2d0	 a5 0c 0f 10 02 1d 11 2a 20 00 00 00 00 00 00 20
+< 0x2e0	 00 00 00 04 44 44 00 00 48 00 00 00 04 00 00 bc
+< 0x2f0	 e1 00 0d 03 ec ff ff ff ff ff ff ff ff 00 ff a5
+< 0x300	 0c 0f 10 02 1d 11 2a 20 00 00 00 00 00 00 20 00
+< 0x310	 00 00 04 44 44 00 00 48 00 00 00 04 00 00 bc e1
+< 0x320	 00 0d 03 ec ff ff ff ff ff ff ff ff 00 ff a5 0c
+< 0x330	 0f 10 02 1d 11 2a 21 00 00 00 00 00 00 20 0c 00
+< 0x340	 00 04 44 44 00 00 48 00 00 00 04 00 00 bc e1 00
+< 0x350	 0d 03 f9 ff ff ff ff ff ff ff ff 00 ff a5 0c 0f
+< 0x360	 10 02 1d 11 2a 21 00 00 00 00 00 00 20 0c 00 00
+< 0x370	 04 44 44 00 00 48 00 00 00 04 00 00 bc e1 00 0d
+< 0x380	 03 f9 ff ff ff ff ff ff ff ff 00 ff a5 0c 0f 10
+< 0x390	 02 1d 11 2a 21 00 00 00 00 00 00 20 0c 00 00 04
+< 0x3a0	 44 44 00 00 48 00 00 00 04 00 00 bc e1 00 0d 03
+< 0x3b0	 f9 ff ff ff ff ff ff ff ff 00 ff a5 0c 0f 10 08
+< 0x3c0	 0d 44 44 48 5a 62 04 00 00 0 10 02 50 11 02 75 10 03
+< 0x0	 ff ff ff ff ff ff ff ff 00 ff a5 0c 0f 10 02 1d
+< 0x10	 11 2b 21 00 00 00 00 00 00 20 0c 00 00 04 44 44
+< 0x20	 00 00 48 00 00 00 04 00 00 bc e1 00 0d 03 fa
+< 0x0	 ff ff ff ff ff ff ff ff 00 ff a5 0c 0f 10 02 1d
+< 0x10	 11 2b 21 00 00 00 00 00 00 20 0c 00 00 04 44 44
+< 0x20	 00 00 48 00 00 00 04 00 00 bc e1 00 0d 03 fa
+< 0x0	 ff ff ff ff ff ff ff ff 00 ff a5 0c 0f 10 02 1d
+< 0x10	 11 2b 21 00 00 00 00 00 00 20 0c 00 00 04 44 44
+< 0x20	 00 00 48 00 00 00 04 00 00 bc e1 00 0d 03 fa
+< 0x0	 ff ff ff ff ff ff ff ff 00 ff a5 0c 0f 10 02 1d
+< 0x10	 11 2b 21 00 00 00 00 00 00 20 0c 00 00 04 44 44
+< 0x20	 00 00 48 00 00 00 04 00 00 bc e1 00 0d 03 fa
+< 0x0	 ff ff ff ff ff ff ff ff 00 ff a5 0c 0f 10 02 1d
+< 0x10	 11 2b 21 00 00 00 00 00 00 20 0c 00 00 04 44 44
+< 0x20	 00 00 48 00 00 00 04 00 00 bc e1 00 0d 03 fa
+< 0x0	 ff ff ff ff ff ff ff ff 00 ff a5 0c 0f 10 02 1d
+< 0x10	 11 2b 21 00 00 00 00 00 00 20 0c 00 00 04 44 44
+< 0x20	 00 00 48 00 00 00 04 00 00 bc e1 00 0d 03 fa
+< 0x0	 ff ff ff ff ff ff ff ff 00 ff a5 0c 0f 10 02 1d
+< 0x10	 11 2b 21 00 00 00 00 00 00 20 0c 00 00 04 45 45
+< 0x20	 00 00 48 00 00 00 04 00 00 bc e1 00 0d 03 fc
+< 0x0	 ff ff ff ff ff ff ff ff 00 ff a5 0c 0f 10 02 1d
+< 0x10	 11 2b 21 00 00 00 00 00 00 20 0c 00 00 04 45 45
+< 0x20	 00 00 48 00 00 00 04 00 00 bc e1 00 0d 03 fc
+< 0x0	 ff ff ff ff ff ff ff ff 00 ff a5 0c 0f 10 02 1d
+< 0x10	 11 2b 21 00 00 00 00 00 00 20 0c 00 00 04 45 45
+< 0x20	 00 00 48 00 00 00 04 00 00 bc e1 00 0d 03 fc
+< 0x0	 10 02 50 11 02 75 10 03
+< 0x0	 ff ff ff ff ff ff ff ff 00 ff a5 0c 0f 10 02 1d
+< 0x10	 11 2b 21 00 00 00 00 00 00 20 0c 00 00 04 45 45
+< 0x20	 00 00 48 00 00 00 04 00 00 bc e1 00 0d 03 fc

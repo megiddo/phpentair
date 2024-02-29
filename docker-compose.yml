@@ -1,0 +1,43 @@
+services:
+  api:
+    build: 
+      context: .
+      dockerfile: Dockerfile.api
+    ports:
+      - 14080:80
+    volumes:
+      - ./api:/var/www/pentair/api
+      - ./data:/var/www/pentair/data
+      - ./lib:/var/www/pentair/lib
+    networks:
+      - pentairnet
+    container_name: pentair-api
+  signal:
+    build: 
+      context: .
+      dockerfile: Dockerfile.signal
+    ports:
+      - 15080:80
+    volumes:
+      - ./signal:/var/www/pentair/signal
+      - ./data:/var/www/pentair/data
+      - ./lib:/var/www/pentair/lib
+    networks:
+      - pentairnet
+    container_name: pentair-signal
+  app:
+    build: 
+      context: .
+      dockerfile: Dockerfile.app
+    ports:
+      - 16080:80
+    volumes:
+      - ./signal:/var/www/pentair/app
+      - ./data:/var/www/pentair/data
+      - ./lib:/var/www/pentair/lib
+    networks:
+      - pentairnet
+    container_name: pentair-app
+
+networks:
+  pentairnet:
