@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "62d60de4b802ec31b840b9197e947981",
+    "content-hash": "d5b99e866a7c2382d96ed04ff670ad03",
     "packages": [
         {
             "name": "fig/http-message-util",
@@ -446,6 +446,34 @@
                 "source": "https://github.com/PHP-DI/PhpDocReader/tree/2.2.1"
             },
             "time": "2020-10-12T12:39:22+00:00"
+        },
+        {
+            "name": "phpentair/libpentair",
+            "version": "0.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/megiddo/libphpentair.git",
+                "reference": "8203988a35a4dbc0eeb824a63500c3e8076e28fb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/megiddo/libphpentair/zipball/8203988a35a4dbc0eeb824a63500c3e8076e28fb",
+                "reference": "8203988a35a4dbc0eeb824a63500c3e8076e28fb",
+                "shasum": ""
+            },
+            "require": {
+                "psr/log": "^3.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "support": {
+                "issues": "https://github.com/megiddo/libphpentair/issues",
+                "source": "https://github.com/megiddo/libphpentair/tree/v0.9.0"
+            },
+            "time": "2024-03-09T20:43:54+00:00"
         },
         {
             "name": "psr/container",

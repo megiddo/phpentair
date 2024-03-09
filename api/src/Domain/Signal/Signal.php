@@ -5,19 +5,18 @@ declare(strict_types=1);
 namespace App\Domain\Signal;
 
 use JsonSerializable;
+use DateTime;
 
 class Signal implements JsonSerializable
 {
     private int $id;
+    private DateTime $ts;
+    private string $signal;
 
-    private Date $ts;
-
-    private string $message;
-
-    public function __construct(int $id, Date $ts, string $message) {
+    public function __construct(int $id, DateTime $ts, string $signal) {
         $this->id = $id;
         $this->ts = $ts;
-        $this->message = $message;
+        $this->signal = $signal;
     }
 
     public function getId(): int {
@@ -28,8 +27,8 @@ class Signal implements JsonSerializable
         return $this->ts;
     }
 
-    public function getMessage(): string {
-        return $this->message;
+    public function getSignal(): string {
+        return $this->signal;
     }
 
     #[\ReturnTypeWillChange]
@@ -38,7 +37,7 @@ class Signal implements JsonSerializable
         return [
             'id' => $this->id,
             'ts' => $this->ts,
-            'message' => $this->message,
+            'signal' => $this->signal,
         ];
     }
 
