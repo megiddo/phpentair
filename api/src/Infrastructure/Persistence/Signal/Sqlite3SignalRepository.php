@@ -31,7 +31,7 @@ class Sqlite3SignalRepository implements SignalRepository
      * @return Signal[]
      */
     public function mostRecent(int $count): array {
-        $res = $this->signalDb->query('select id, ts, hex(signal) as signal from signals order by id desc limit 1');
+        $res = $this->signalDb->query('select id, ts, hex(signal) as signal from signals order by id desc limit ' . $count);
         $signals = [];
         while ($row = $res->fetchArray(SQLITE3_ASSOC)) {
             $signals[] = new Signal($row['id'], new \DateTime($row['ts']), $row['signal']);

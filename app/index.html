@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>Poseidon Control</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <style>
+        .switch label {
+            color: white;
+        }
+        input[type=text]:not(.browser-default) {
+            border-bottom: 1px solid white;
+        }
+        .input-field>label {
+            color: #ba68c8;
+        }
+    </style>
+</head>
+<body>
+<div class="navbar-fixed">
+    <nav class="purple lighten-2" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo">Poseidon</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#status">Status</a></li>
+                <li><a href="#controls">Controls</a></li>
+            </ul>
+
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+</div>
+<ul id="nav-mobile" class="sidenav">
+    <li><a href="#status">Status</a></li>
+    <li><a href="#controls">Controls</a></li>
+</ul>
+
+<div class="container">
+    <div class="section">
+
+        <div class="row" id="status">
+            <div class="col s12 m6">
+                <div class="card purple lighten-3">
+                    <div class="card-content white-text">
+                        <span class="card-title">Status</span>
+                        <table>
+                            <thead>
+                            <tr>
+                                <td>Feature</td>
+                                <td>Status</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Pool Time</td>
+                                <td id="pool-time"></td>
+                            </tr>
+                            <tr>
+                                <td>Air Temp</td>
+                                <td id="air-temp"></td>
+                            </tr>
+                            <tr>
+                                <td>Filter Pump</td>
+                                <td id="filter-pump"></td>
+                            </tr>
+                            <tr>
+                                <td>Alvin</td>
+                                <td id="alvin"></td>
+                            </tr>
+                            <tr>
+                                <td>Waterfall</td>
+                                <td id="waterfall"></td>
+                            </tr>
+                            <tr>
+                                <td>Pool</td>
+                                <td id="pool-status">
+                                    <i class="material-icons blue-grey-text" id="pool-status-light" style="vertical-align: middle">lightbulb_outline</i>
+                                    <i class="material-icons" id="pool-status-control" style="vertical-align: middle">check_box_outline_blank</i>
+                                    <span id="pool-status-temp" style="vertical-align: middle">56 F</span>
+                                    <span id="pool-status-temp-set" style="vertical-align: middle">(85 F)</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Spa</td>
+                                <td id="spa-status">
+                                    <i class="material-icons blue-grey-text" id="spa-status-light" style="vertical-align: middle">lightbulb_outline</i>
+                                    <i class="material-icons" id="spa-status-control" style="vertical-align: middle">check_box_outline_blank</i>
+                                    <span id="spa-status-temp" style="vertical-align: middle">56 F</span>
+                                    <span id="spa-status-temp-set" style="vertical-align: middle">(98 F)</span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m6" id="controls">
+                <div class="card purple lighten-3">
+                    <div class="card-content white-text">
+                        <span class="card-title">Control</span>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Feature</td>
+                                    <td>Status</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Spa</td>
+                                    <td>
+                                        <div class="switch">
+                                            <label>
+                                                Off
+                                                <input type="checkbox" id="spa-control">
+                                                <span class="lever"></span>
+                                                On
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Spa Temp</td>
+                                    <td>
+                                        <div class="input-field">
+                                            <input id="spa-set-temp" type="number" class="validate">
+                                            <label for="spa-set-temp">Temp</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Pool Temp</td>
+                                    <td>
+                                        <div class="input-field">
+                                            <input id="water-set-temp" type="number" class="validate">
+                                            <label for="water-set-temp">Temp</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Spa Light</td>
+                                    <td>
+                                        <div class="switch">
+                                            <label>
+                                                Off
+                                                <input type="checkbox" id="spa-light-control">
+                                                <span class="lever"></span>
+                                                On
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Pool Light</td>
+                                    <td>
+                                        <div class="switch">
+                                            <label>
+                                                Off
+                                                <input type="checkbox" id="pool-light-control">
+                                                <span class="lever"></span>
+                                                On
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Waterfall</td>
+                                    <td>
+                                        <div class="switch">
+                                            <label>
+                                                Off
+                                                <input type="checkbox" id="waterfall-control">
+                                                <span class="lever"></span>
+                                                On
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Alvin</td>
+                                    <td>
+                                        <div class="switch">
+                                            <label>
+                                                Off
+                                                <input type="checkbox" id="alvin-control">
+                                                <span class="lever"></span>
+                                                On
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <br><br>
+</div>
+
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script type="application/javascript">
+    (function($){
+        $(function(){
+
+            $('.sidenav').sidenav();
+
+            var getSignal = setInterval(function () {
+                $.get('http://localhost:14080/api/signals/30', function (data) {
+                    data.data.forEach((x, i) => {
+                        var signal = JSON.parse(x.parsed);
+                        if (signal.command == 2) {
+                            $('#pool-time').text(signal.hours + ':' + signal.minutes);
+                            $('#filter-pump').text(signal.circuitStatus.filterPump);
+                            $('#alvin').text(signal.circuitStatus.cleanerPump);
+                            $('#waterfall').text(signal.circuitStatus.waterFeature);
+
+                            if (signal.circuitStatus.spaLight == "on") {
+                                $('#spa-status-light').removeClass('blue-grey-text');
+                                $('#spa-status-light').addClass(' amber-text text-darken-3 yellow');
+                            } else {
+                                $('#spa-status-light').addClass('blue-grey-text');
+                                $('#spa-status-light').removeClass(' amber-text text-darken-3 yellow');
+                            }
+                            $('#spa-status-temp').text(signal.heaterTemp + '° F');
+
+                            if (signal.circuitStatus.poolLight == "on") {
+                                $('#pool-status-light').removeClass('blue-grey-text');
+                                $('#pool-status-light').addClass(' amber-text text-darken-3 yellow');
+                            } else {
+                                $('#pool-status-light').addClass('blue-grey-text');
+                                $('#pool-status-light').removeClass(' amber-text text-darken-3 yellow');
+                            }
+                            $('#pool-status-control').text(signal.circuitStatus.filterPump == "on" ? "check_box" : "check_box_outline_blank");
+                            $('#pool-status-temp').text(signal.waterTemp + '° F');
+
+                            $('#air-temp').text(signal.airTemp + '° F');
+                            /*
+{
+    "raw": "ff00ffa50c0f10021d06110000000000000020000000042a2a000028000000040000bce1000d0354",
+    "protocol": 12,
+    "destination": 15,
+    "source": 16,
+    "command": 2,
+    "length": 29,
+    "minutes": 17,
+    "hours": 6,
+    "circuits": 0,
+    "circuitStatus": {
+        "filterPump": "off",
+        "cleanerPump": "off",
+        "waterFeature": "off",
+        "spaLight": "off",
+        "poolLight": "off"
+    },
+    "waterTemp": 42,
+    "heaterTemp": 42,
+    "airTemp": 40
+}
+                             */
+                        } else {
+                            /*
+{
+    "raw": "ff00ffa50c0f10080d2a2a285a6204000000000000000221",
+    "protocol": 12,
+    "destination": 15,
+    "source": 16,
+    "command": 8,
+    "length": 13,
+    "water": 42,
+    "air": 40,
+    "waterSet": 90,
+    "spaSet": 98,
+    "info": 4
+}
+                             */
+                            $('#spa-status-temp-set').text(`(${signal.spaSet}° F)`);
+                            $('#spa-set-temp').val(signal.spaSet);
+
+                            $('#pool-status-temp-set').text(`(${signal.waterSet}° F)`);
+                            $('#water-set-temp').val(signal.waterSet);
+                            M.updateTextFields();
+                        }
+                    });
+                })
+            }, 2500);
+
+        }); // end of document ready
+    })(jQuery); // end of jQuery name space
+</script>
+</body>
+</html>
