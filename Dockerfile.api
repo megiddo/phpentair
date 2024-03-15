@@ -2,7 +2,7 @@ FROM ubuntu:22.04
 
 RUN apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install tzdata
-RUN apt-get update && apt-get install -y less gzip wget nginx zip unzip git nano mysql-client cron sqlite3
+RUN apt-get update && apt-get install -y less gzip wget nginx nginx-extras zip unzip git nano mysql-client cron sqlite3
 RUN apt-get update && apt-get install --no-install-recommends -y php8.1 php-sqlite3
 RUN apt-get install -y php8.1-fpm php8.1-cli php8.1-common php8.1-mysql php8.1-mbstring php8.1-curl php8.1-xml
 
