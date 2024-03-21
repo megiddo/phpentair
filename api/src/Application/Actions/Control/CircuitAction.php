@@ -6,6 +6,7 @@ namespace App\Application\Actions\Control;
 
 use Phpentair\Com\HexStringSampleConnector;
 use Phpentair\Pentair;
+use Phpentair\PentairComFacade;
 use Phpentair\Command\CircuitChange;
 use Psr\Http\Message\ResponseInterface as Response;
 

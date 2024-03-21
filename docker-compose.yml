@@ -12,6 +12,7 @@ services:
     networks:
       - pentairnet
     container_name: pentair-api
+    restart: always
   signal:
     build: 
       context: .
@@ -25,6 +26,7 @@ services:
     networks:
       - pentairnet
     container_name: pentair-signal
+    restart: always
   app:
     build: 
       context: .
@@ -38,6 +40,7 @@ services:
     networks:
       - pentairnet
     container_name: pentair-app
+    restart: always
 
 networks:
   pentairnet:

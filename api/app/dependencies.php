@@ -26,5 +26,12 @@ return function (ContainerBuilder $containerBuilder) {
 
             return $logger;
         },
+        \Phpentair\Com\IConnector::class => function(ContainerInterface $c) {
+            $settings = $c->get(SettingsInterface::class);
+
+            $pentairSettings = $settings->get('pentair');
+
+            return new \Phpentair\Com\EW11Connector($pentairSettings['endpoint'], $pentairSettings['port']);
+        }
     ]);
 };
