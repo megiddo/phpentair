@@ -21,6 +21,10 @@ return function (ContainerBuilder $containerBuilder) {
                     'path' => isset($_ENV['docker']) ? 'php://stdout' : __DIR__ . '/../logs/app.log',
                     'level' => Logger::INFO,
                 ],
+                'pentair' => [
+                    'endpoint' => '10.0.0.11',
+                    'port' => 8899
+                ],
                 'signalsDbPath'       => '/var/www/pentair/data/signal.sql3',
             ]);
         }

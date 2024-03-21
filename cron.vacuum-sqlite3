@@ -1,1 +1,1 @@
-5 4 * * * /usr/bin/sqlite3 /var/www/pentair/data/signal.sql3 vacuum
+5 4 * * * /usr/bin/php /var/www/pentair/signal/clean_and_vacuum.php

@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use App\Application\Actions\Signal\RecentSignalsAction;
+use \App\Application\Actions\Control\CircuitAction;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Slim\App;
@@ -25,6 +26,6 @@ return function (App $app) {
     });
 
     $app->group('/api/control', function(Group $group) {
-       $group->post('/circuit/{circuit}', );
+       $group->put('/circuit/{circuit}', CircuitAction::class);
     });
 };
