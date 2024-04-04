@@ -15,7 +15,7 @@ class Sqlite3SignalRepository implements SignalRepository
 
     private \SQLite3 $signalDb;
 
-    public function __construct(\App\Domain\Configuration\ConfigurationRepository $config) {
+    public function __construct(ConfigurationRepository $config) {
         $this->signalDb = new \SQLite3($config->signalsDbPath);
     }
 
