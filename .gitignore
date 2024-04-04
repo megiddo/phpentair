@@ -9,8 +9,12 @@ composer.lock
 .DS_Store
 **/.DS_Store
 .idea
+<<<<<<< HEAD
 data/mysql/*
 data/mysql/**
 data/.env
 data/signal.sql3
 data/sample.sql3
+=======
+data/*
+>>>>>>> e18af970728b9c5340a66554234af0b0d0a3e74e

@@ -12,7 +12,6 @@ $db   = 'signal';
 $user = 'pentair';
 $pass = 'pentair';
 $charset = 'utf8mb4';
-
 $dsn = "mysql:host=$host;port=17306;dbname=$db;charset=$charset";
 $options = [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
