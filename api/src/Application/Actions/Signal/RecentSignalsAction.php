@@ -26,13 +26,14 @@ class RecentSignalsAction extends SignalAction
 
         foreach ($signals as $signal) {
             try {
+                var_dump($signal); die();
                 $hexstr = new HexStringSampleConnector($signal->getSignal());
                 $com = new PentairComFacade($hexstr);
                 $pentair = new Pentair($com);
 
                 $signal->parsed($pentair->read()->toJson());
             } catch (\Exception $e) {
-                $signal->error($e);
+                $signal->error($e->getMessage());
             }
         }
 

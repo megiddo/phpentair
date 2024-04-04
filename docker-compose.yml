@@ -41,6 +41,20 @@ services:
       - pentairnet
     container_name: pentair-app
     restart: always
-
+  db:
+    image: mariadb:latest
+    restart: always
+    environment:
+      MARIADB_USER: pentair
+      MARIADB_ROOT_PASSWORD: pentair
+      MARIADB_PASSWORD: pentair
+      MARIADB_DATABASE: signal
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+    networks:
+      - pentairnet
+    ports:
+      - 17306:3306
+    container_name: pentair-db
 networks:
   pentairnet:

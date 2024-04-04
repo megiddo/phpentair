@@ -7,16 +7,20 @@ namespace App\Infrastructure\Persistence\Signal;
 use App\Domain\Signal\Signal;
 use App\Domain\Signal\SignalRepository;
 use App\Domain\Configuration\ConfigurationRepository;
-use SQLite3;
-use DateTime;
 
-class Sqlite3SignalRepository implements SignalRepository
+class MysqlSignalRepository implements SignalRepository
 {
 
-    private \SQLite3 $signalDb;
+    private \PDO $signalDb;
 
     public function __construct(ConfigurationRepository $config) {
-        $this->signalDb = new \SQLite3($config->signalsDbPath);
+        $dsn = "mysql:host=$_ENV[host];port=$_ENV[port];dbname=$_ENV[db];charset=$_ENV[charset]";
+        $options = [
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+            PDO::ATTR_EMULATE_PREPARES => false,
+        ];
+        $this->signalDb = new PDO($dsn, $_ENV['user'], $_ENV['pass'], $options);
     }
 
     /**
@@ -31,9 +35,9 @@ class Sqlite3SignalRepository implements SignalRepository
      * @return Signal[]
      */
     public function mostRecent(int $count): array {
-        $res = $this->signalDb->query('select id, ts, hex(signal) as signal from signals order by id desc limit ' . $count);
+        $res = $this->signalDb->query('select id, ts, signal as signal from signals order by id desc limit ' . $count);
         $signals = [];
-        while ($row = $res->fetchArray(SQLITE3_ASSOC)) {
+        while ($row = $res->fetchAll(PDO::FETCH_ASSOC)) {
             $signals[] = new Signal($row['id'], new \DateTime($row['ts']), $row['signal']);
         }
 

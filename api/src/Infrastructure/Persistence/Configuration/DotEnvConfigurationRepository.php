@@ -8,14 +8,15 @@ use App\Domain\Configuration\ConfigurationRepository;
 
 class DotEnvConfigurationRepository implements ConfigurationRepository
 {
+    private \Dotenv\Dotenv $dotenv;
 
     public function __construct() {
-
+        $dotenvPath = $_ENV['DOTENV_PATH'] ?? '/var/www/pentair/data';
+        $this->dotenv = \Dotenv\Dotenv::createImmutable($dotenvPath);
+        $this->dotenv->load();
     }
 
     public function __get(string $key): mixed {
-        if ($key == 'signalsDbPath') {
-            return '/var/www/pentair/data/sample.sql3';
-        }
+        return $_ENV[$key];
     }
 }
