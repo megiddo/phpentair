@@ -9,3 +9,8 @@ composer.lock
 .DS_Store
 **/.DS_Store
 .idea
+data/mysql/*
+data/mysql/**
+data/.env
+data/signal.sql3
+data/sample.sql3
