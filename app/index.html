@@ -220,7 +220,7 @@
             $('.sidenav').sidenav();
 
             var getSignal = setInterval(function () {
-                $.get('http://10.0.0.14/api/signals/30', function (data) {
+                $.get('http://10.0.0.30/api/signals/30', function (data) {
                     data.data.forEach((x, i) => {
                         var signal = JSON.parse(x.parsed);
                         if (signal.command == 2) {

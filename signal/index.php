@@ -6,13 +6,13 @@ error_reporting(E_ALL);
 
 $signal = bin2hex(file_get_contents('php://input'));
 
-$host = '172.20.0.1';
+$host = '10.0.0.30';
 $port = '17306';
 $db   = 'signal';
 $user = 'pentair';
 $pass = 'pentair';
 $charset = 'utf8mb4';
-$dsn = "mysql:host=$host;port=17306;dbname=$db;charset=$charset";
+$dsn = "mysql:host=$host;port=$port;dbname=$db;charset=$charset";
 $options = [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
