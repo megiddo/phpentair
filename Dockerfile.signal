@@ -18,7 +18,7 @@ WORKDIR /var/www/pentair
 COPY --from=composer /usr/bin/composer /var/www/pentair/composer.phar
 RUN mv /var/www/pentair/composer.phar /usr/local/bin/composer
 
-COPY heartbeat.sh /var/www/pentair/heartbeat.sh
-RUN chmod +x heartbeat.sh
+COPY listen.sh /var/www/pentair/listen.sh
+RUN chmod +x listen.sh
 
-CMD ./heartbeat.sh
+CMD ./listen.sh

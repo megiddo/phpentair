@@ -4,9 +4,9 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$signal = bin2hex(file_get_contents('php://input'));
+include_once('vendor' . DIRECTORY_SEPARATOR . 'autoload.php');
 
-$host = '10.0.0.30';
+$host = '10.0.0.15';
 $port = '17306';
 $db   = 'signal';
 $user = 'pentair';
@@ -19,20 +19,11 @@ $options = [
     PDO::ATTR_EMULATE_PREPARES   => false,
 ];
 $signalDb = new PDO($dsn, $user, $pass, $options);
-if (strlen($signal) > 0) {
-    $stmt = $signalDb->prepare("INSERT INTO signals (`signal`) values (:signal)");
-    $stmt->bindParam('signal', $signal);
-    $insert = $stmt->execute();
-}
-$signals = $signalDb->query('select * from signals order by id desc limit 3');
 
-echo json_encode($signals->fetchAll(PDO::FETCH_ASSOC));
+$signals = $signalDb->query('select * from signals order by id desc limit 30');
 
-/*
-CREATE TABLE `signals` (
-  `ts` datetime NOT NULL DEFAULT current_timestamp(),
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `signal` varchar(200) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15445 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
- */
+header('Content-Type: application/json; charset=utf-8');
+echo json_encode($signals->fetchAll(PDO::FETCH_ASSOC)) . "\n";
+
+die();
+

@@ -18,10 +18,11 @@ class CircuitAction extends PentairAction
      */
     protected function action(): Response
     {
+        // Blocks until read
         $message = $this->pentair->read();
         $protocol = $message->protocol;
 
-        usleep(20);
+        usleep(10 * 1000);
         switch ($this->args['circuit']) {
             case 'poolLightOn':
                 $cmd = CircuitChange::poolLight($protocol, CircuitChange::$ON);
@@ -65,7 +66,7 @@ class CircuitAction extends PentairAction
         $ack = $this->pentair->read();
         $hexstr = new HexStringSampleConnector($ack->getSignal());
         $com = new PentairComFacade($hexstr);
-        $pentair = new Pentair($com, 'pentair.lock', 'pentair.cache');
+        $pentair = new Pentair($com);
 
         $ack->parsed($pentair->read()->toJson());
 

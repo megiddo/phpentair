@@ -21,6 +21,6 @@ abstract class PentairAction extends Action
         parent::__construct($logger);
         $this->IConnector = $IConnector;
         $this->com = new PentairComFacade($this->IConnector);
-        $this->pentair = new Pentair($this->com, 'pentair.lock', 'pentair.cache');
+        $this->pentair = new Pentair($this->com);
     }
 }
